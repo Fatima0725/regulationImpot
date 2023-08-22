@@ -1,0 +1,164 @@
+/* Reset des marges et paddings par défaut */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 800px; /* Ajustez selon vos préférences */
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Empêche le contenu de déborder */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav {
+    text-align: center;
+}
+
+.menu {
+    background-color: #352315;
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #f0f0f0;
+    color: #352315;
+    padding: 10px;
+    border-radius: 3%;
+}
+
+
+
+.declarant-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.declarant-table th,
+.declarant-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.declarant-table th {
+    background-color: #f2f2f2;
+}
+
+.declarant-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.declarant-table tr:hover {
+    background-color: #e0e0e0;
+}
+
+.add-button {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    background-color: #007bff;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+}
+
+.add-button:hover {
+    background-color: green;
+}
+/*QUIT BUTTON*/
+.quit-button {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    background-color: #ED0010;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+}
+
+.quit-button {
+    background-color: #f00020;
+}
+/*.quit-button {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    top: 20px;
+    left: 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.quit-button:hover {
+    background-color: #c82333;
+}*/
+
+/* Styliser les messages de succès */
+.success-message {
+    background-color: #4caf50; /* Couleur verte pour les succès */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Styliser les messages d'erreur */
+.error-message {
+    background-color: #f44336; /* Couleur rouge pour les erreurs */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+

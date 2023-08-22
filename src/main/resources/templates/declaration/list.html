@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>List of Declarations</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<div class="container">
+    <div th:replace="~{index :: menu}"></div>
+    <h1>List of Declarations</h1>
+    <table class="declarant-table">
+        <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Montant</th>
+            <th>Contribuable Correspondante</th>
+        </tr>
+        <tr th:each="declaration : ${listDeclaration}">
+            <td th:text="${declaration.id}"></td>
+            <td th:text="${declaration.dateDeclaration}"></td>
+            <td th:text="${declaration.montantDeclaration}"></td>
+            <td th:text="${declaration.declarant.raisonSociale}"></td>
+            <td>
+                <a th:href="@{/paiements/payDeclaration(idDeclaration=${declaration.id})}" class="pay-button">Payer</a>
+            </td>
+        </tr>
+        </tr>
+    </table>
+    <a th:href="@{/declarations/addNewDeclaration}" class="add-button">+</a>
+    <a th:href="@{/}" class="quit-button">x</a>
+</div>
+</body>
+</html>

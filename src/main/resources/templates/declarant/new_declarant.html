@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Declarant</title>
+    <link rel="stylesheet" th:href="@{/css/new_declarant.css}" />
+</head>
+<body>
+<div class="container">
+    <h1>Add Declarant</h1>
+    <div th:if="${errorMessage}" class="error-message">
+        <p th:text="${errorMessage}"></p>
+    </div>
+
+    <form th:action="@{/declarants/saveDeclarant}" th:object="${declarant}" method="post" class="declarant-form">
+        <a th:href="@{/declarants/list}" class="quit-button">X</a>
+        <div class="form-group">
+            <label for="raisonSociale">Raison Sociale:</label>
+            <input type="text" id="raisonSociale" name="raisonSociale" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+            <label for="adresse">Adresse:</label>
+            <input type="text" id="adresse" name="adresse" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+            <label for="telephone">Téléphone:</label>
+            <input type="tel" id="telephone" name="telephone" class="form-control" required />
+        </div>
+        <button type="submit" class="submit-button">Ajouter Déclarant</button>
+    </form>
+</div>
+</body>
+</html>

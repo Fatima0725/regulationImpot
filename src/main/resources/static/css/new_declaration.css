@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modern-form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input, select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/*QUIT BUTTON*/
+.quit-button {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    background-color: #ED0010;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    text-decoration: none;
+}
+
+.quit-button {
+    background-color: #f00020;
+}
+
+/* Styliser les messages d'erreur */
+ .error-message {
+     background-color: #f44336; /* Couleur rouge pour les erreurs */
+     color: white;
+     padding: 10px;
+     border-radius: 5px;
+     margin-bottom: 10px;
+ }

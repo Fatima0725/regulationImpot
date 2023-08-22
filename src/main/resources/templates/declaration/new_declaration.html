@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add New Declaration</title>
+  <link rel="stylesheet" th:href="@{/css/new_declaration.css}" />
+</head>
+<body>
+<div class="container">
+  <h1>Add New Declaration</h1>
+
+  <form th:action="@{/declarations/saveDeclaration}" th:object="${declaration}" method="post" class="modern-form">
+    <a th:href="@{/declarations/list}" class="quit-button">X</a>
+    <label for="dateDeclaration">Date:</label>
+    <input type="date" id="dateDeclaration" th:field="*{dateDeclaration}" required>
+
+    <label for="montantDeclaration">Montant:</label>
+    <input type="number" id="montantDeclaration" th:field="*{montantDeclaration}" required>
+
+    <label for="idDeclarant">Declarant:</label>
+    <select id="idDeclarant" th:field="*{declarant}" required>
+      <option th:each="declarant : ${listDeclarants}" th:value="${declarant.id}" th:text="${declarant.raisonSociale}"></option>
+    </select>
+
+    <button type="submit" class="submit-button">Save</button>
+  </form>
+</div>
+</body>
+</html>

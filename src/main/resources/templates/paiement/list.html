@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Paiements</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<a th:href="@{/}" class="quit-button">X</a>
+<div class="container">
+    <div th:replace="index :: menu"></div>
+    <h1>List of Paiements</h1>
+    <table class="declarant-table">
+        <tr>
+            <th>ID</th>
+            <th>Date de Paiemengt</th>
+            <th>Montant Payé</th>
+            <th>Montant Dû</th>
+        </tr>
+        <tr th:each="paiement : ${listPaiements}">
+            <td th:text="${paiement.id}"></td>
+            <td th:text="${paiement.datePaiement}"></td>
+            <td th:text="${paiement.montantPaiement}"></td>
+            <td th:text="${paiement.declaration.montantDeclaration}"></td>
+        </tr>
+    </table>
+    <a th:href="@{/paiements/addNewPaiement}" class="add-button">+</a>
+</div>
+</body>
+</html>

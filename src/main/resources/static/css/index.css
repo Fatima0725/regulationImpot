@@ -1,0 +1,32 @@
+/* Style du menu */
+.menu {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: block;
+}
+
+.menu-link:hover {
+    background-color: #555;
+}
+
+/* Style du contenu de la page */
+.content {
+    margin-top: 50px; /* Espace pour le menu fixe */
+    padding: 20px;
+}

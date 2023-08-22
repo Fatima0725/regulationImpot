@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Declarants</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+
+<div class="container">
+    <div th:replace="~{index :: menu}"></div>
+    <h1>List of Declarants</h1>
+        <!-- Affichage du message de succès -->
+        <div th:if="${successMessage}" class="success-message">
+            <p th:text="${successMessage}"></p>
+        </div>
+
+    <!-- Affichage du message d'erreur -->
+        <div th:if="${errorMessage}" class="error-message">
+            <p th:text="${errorMessage}"></p>
+        </div>
+    <table class="declarant-table">
+        <tr>
+            <th>ID</th>
+            <th>Raison Sociale</th>
+            <th>Adresse</th>
+            <th>Email</th>
+            <th>Téléphone</th>
+        </tr>
+        <tr th:each="declarant : ${listDeclarants}">
+            <td th:text="${declarant.id}"></td>
+            <td th:text="${declarant.raisonSociale}"></td>
+            <td th:text="${declarant.adresse}"></td>
+            <td th:text="${declarant.email}"></td>
+            <td th:text="${declarant.telephone}"></td>
+        </tr>
+    </table>
+    <a th:href="@{/declarants/addNewDeclarant}" class="add-button">+</a>
+    <a th:href="@{/}" class="quit-button">X</a>
+</div>
+</body>
+</html>

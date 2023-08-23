@@ -19,7 +19,9 @@ Mise en place de système de régularisation des impôts pour les contribuables 
 
 ![Ajoit d'un nouveau paiement](https://github.com/Fatima0725/regulationImpot/assets/99106729/1f439fd8-abc2-448e-8a3d-d24c2d0589a9)
 
+![Liste après ajout d'un nouveau paiement](https://github.com/Fatima0725/regulationImpot/assets/99106729/f79bfa75-0106-405e-98da-0f8a944cd8ac)
+
 ![Echec d'ajout d'un nouveau paiement](https://github.com/Fatima0725/regulationImpot/assets/99106729/7d5a35e7-321c-40ec-a703-188a2075e4a4)
 
-![Liste après ajout d'un nouveau paiement](https://github.com/Fatima0725/regulationImpot/assets/99106729/f79bfa75-0106-405e-98da-0f8a944cd8ac)
+
 
